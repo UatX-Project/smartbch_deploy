@@ -75,7 +75,7 @@ ln -s librocksdb.so.5.18.4 librocksdb.so.5.18 > /dev/null
 export LD_LIBRARY_PATH=./
 export EVMWRAP=./libevmwrap.so
 ./smartbchd init mynode --chain-id 0x2710
-wget https://github.com/smartbch/artifacts/releases/download/v0.0.3/dot.smartbchd.tgz
+wget https://github.com/UatX-Project/smartbch_deploy/releases/download/dotsbchd/dot.smartbchd.tgz
 tar zxvf dot.smartbchd.tgz
 cp -rf dot.smartbchd/* .smartbchd/
 rm -rf ./dot.smartbchd ./dot.smartbchd.tgz ./._dot.smartbch
