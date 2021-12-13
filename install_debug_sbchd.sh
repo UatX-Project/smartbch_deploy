@@ -53,13 +53,13 @@ export LD_LIBRARY_PATH=$ROCKSDB_PATH:/usr/local/lib
 cd $BUILDDIR
 mkdir smart_bch
 cd smart_bch
-git clone --depth 1 https://github.com/smartbch/moeingevm
+git clone --depth 1 -b dev_smartbch_main https://github.com/smartbch/moeingevm
 cd moeingevm/evmwrap
 make
 export EVMWRAP=$BUILDDIR/smart_bch/moeingevm/evmwrap/host_bridge/libevmwrap.so
 
 cd $BUILDDIR/smart_bch
-git clone --depth 1 https://github.com/smartbch/smartbch
+git clone --depth 1 -b debug https://github.com/smartbch/smartbch
 cd smartbch
 go build -tags cppbtree github.com/smartbch/smartbch/cmd/smartbchd
 
